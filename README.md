@@ -1,8 +1,8 @@
 # HOMEWORK WEEK 5 
 ## ETL PROCESS FROM POKEMON WEBSITE TO HADOOP ENVIRONMENT
-PART A: FILE CREATION
+<b> PART A: FILE CREATION </b>
 1. Create folder to store all the files needed. In this homework, the folder is named as ‘hadoop_pokeapi’
-2. Create a file called 'docker-compose.yml' inside ‘hadoop_pokeapi’ folder. Fill the file with Docker language, as follows:
+2. Create a file called 'docker-compose.yml' inside ‘hadoop_pokeapi’ folder. Fill the file with Docker language, as follows: <br>
 version: '3.8'
 
 services:
@@ -57,7 +57,7 @@ networks:
   hadoop:
 
 3. Inside the folder, create a python image that run a script to store pokebase api to csv file. The image is saved with py file format. In this task, the file is named as hit_pokeapi.py
-Write the python code as follows:
+Write the python code as follows: <br>
 import requests
 import csv
 
@@ -98,7 +98,7 @@ if __name__ == "__main__":
     main()
 
 4. Create txt file that store the library required to install. In this case, the library required is 'requests'
-5. Create a Dockerfile.python to runs a python container in Docker. Write the code as follows:
+5. Create a Dockerfile.python to runs a python container in Docker. Write the code as follows: <br>
 FROM python:3.9
 
 # Create a directory to store the script and CSV files
@@ -110,7 +110,7 @@ COPY hit_pokeapi.py /app/output/
 # Run the Python script to generate CSV files
 CMD ["python3", "hit_pokeapi.py"]
  
-6. Create a file called config. The config code is from the link: https://hub.docker.com/r/apache/hadoop
+6. Create a file called config. The config code is from the link: https://hub.docker.com/r/apache/hadoop <br>
 Write the code as follows:
 CORE-SITE.XML_fs.default.name=hdfs://namenode
 CORE-SITE.XML_fs.defaultFS=hdfs://namenode
