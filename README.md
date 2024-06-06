@@ -146,17 +146,17 @@ CAPACITY-SCHEDULER.XML_yarn.scheduler.capacity.queue-mappings-override.enable=fa
 ## PART B: RUN THE FILE WITH TERMINAL
 1. Open the terminal in VS Code. The terminal could be accesed by clicking view in menu bar, then click Terminal
 2. Go to the ‘hadoop_pokeapi’ directory using ‘cd’ command
-3. Run the following command line:
-    a. docker-compose up
+3. Run the following command line: <br>
+    a. docker-compose up <br>
        This code will run the Dockerfile.python, which would generate all csv files and store it in the docker directory
-       To check whether the csv files is generated or not, use ‘ls’ command
-     b. docker exec -it python_container /bin/bash
-       This code will run a namenode container
-     c. docker-compose exec namenode hadoop fs -mkdir -p /path/in/hdfs/
-       This code will create a folder in hadoop environment in namenode container.
-     d. docker exec namenode bash -c 'for file in /shared/*.csv; do hadoop fs -put "$file" /path/in/hdfs/; done'
-        This code is used to copy all csv files from namenode container in Docker, to the hadoop   environment.
-     e. docker-compose exec namenode hadoop fs -ls /path/in/hdfs/
+       To check whether the csv files is generated or not, use ‘ls’ command <br>
+     b. docker exec -it python_container /bin/bash <br>
+       This code will run a namenode container <br>
+     c. docker-compose exec namenode hadoop fs -mkdir -p /path/in/hdfs/ <br>
+       This code will create a folder in hadoop environment in namenode container. <br>
+     d. docker exec namenode bash -c 'for file in /shared/*.csv; do hadoop fs -put "$file" /path/in/hdfs/; done' <br>
+        This code is used to copy all csv files from namenode container in Docker, to the hadoop   environment. <br>
+     e. docker-compose exec namenode hadoop fs -ls /path/in/hdfs/ <br>
 	This code will check whether the files are uploaded or not
 
 
