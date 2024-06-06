@@ -1,6 +1,6 @@
 # HOMEWORK WEEK 5 
 ## ETL PROCESS FROM POKEMON WEBSITE TO HADOOP ENVIRONMENT
-<b> PART A: FILE CREATION </b>
+## PART A: FILE CREATION 
 1. Create folder to store all the files needed. In this homework, the folder is named as ‘hadoop_pokeapi’ 
    <br>
 2. Create a file called 'docker-compose.yml' inside ‘hadoop_pokeapi’ folder. Fill the file with Docker language, as follows: <br>
@@ -112,6 +112,7 @@ COPY hit_pokeapi.py /app/output/
 #Run the Python script to generate CSV files
 CMD ["python3", "hit_pokeapi.py"]
  <br>
+ <br>
 6. Create a file called config. The config code is from the link: https://hub.docker.com/r/apache/hadoop <br>
 Write the code as follows:
 CORE-SITE.XML_fs.default.name=hdfs://namenode
@@ -141,7 +142,7 @@ CAPACITY-SCHEDULER.XML_yarn.scheduler.capacity.node-locality-delay=40
 CAPACITY-SCHEDULER.XML_yarn.scheduler.capacity.queue-mappings=
 CAPACITY-SCHEDULER.XML_yarn.scheduler.capacity.queue-mappings-override.enable=false
 
-PART B: RUN THE FILE WITH TERMINAL
+## PART B: RUN THE FILE WITH TERMINAL
 1. Open the terminal in VS Code. The terminal could be accesed by clicking view in menu bar, then click Terminal
 2. Go to the ‘hadoop_pokeapi’ directory using ‘cd’ command
 3. Run the following command line:
