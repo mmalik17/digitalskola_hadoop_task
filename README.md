@@ -145,7 +145,9 @@ CAPACITY-SCHEDULER.XML_yarn.scheduler.capacity.queue-mappings-override.enable=fa
 
 ## PART B: RUN THE FILE WITH TERMINAL
 1. Open the terminal in VS Code. The terminal could be accesed by clicking view in menu bar, then click Terminal
+   <br>
 2. Go to the ‘hadoop_pokeapi’ directory using ‘cd’ command
+   <br>
 3. Run the following command line: <br>
     a. docker-compose up <br>
        This code will run the Dockerfile.python, which would generate all csv files and store it in the docker directory
