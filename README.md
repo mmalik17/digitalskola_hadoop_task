@@ -107,9 +107,9 @@ FROM python:3.9
 WORKDIR /app/output/
 COPY requirements.txt /app/output/
 RUN pip install --no-cache-dir -r requirements.txt
-# Copy the Python script into the container
+#Copy the Python script into the container
 COPY hit_pokeapi.py /app/output/
-# Run the Python script to generate CSV files
+#Run the Python script to generate CSV files
 CMD ["python3", "hit_pokeapi.py"]
  <br>
 6. Create a file called config. The config code is from the link: https://hub.docker.com/r/apache/hadoop <br>
@@ -155,6 +155,6 @@ PART B: RUN THE FILE WITH TERMINAL
      d. docker exec namenode bash -c 'for file in /shared/*.csv; do hadoop fs -put "$file" /path/in/hdfs/; done'
         This code is used to copy all csv files from namenode container in Docker, to the hadoop   environment.
      e. docker-compose exec namenode hadoop fs -ls /path/in/hdfs/
-		    This code will check whether the files are uploaded or not
+	This code will check whether the files are uploaded or not
 
 
