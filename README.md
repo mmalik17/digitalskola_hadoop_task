@@ -4,8 +4,8 @@
 1. Create folder to store all the files needed. In this homework, the folder is named as ‘hadoop_pokeapi’ 
    <br>
 2. Create a file called 'docker-compose.yml' inside ‘hadoop_pokeapi’ folder. Fill the file with Docker language, as follows: <br>
-version: '3.8'
 
+version: '3.8'
 services:
   namenode:
     image: bde2020/hadoop-namenode:2.0.0-hadoop2.7.4-java8
@@ -59,6 +59,7 @@ networks:
 
 3. Inside the folder, create a python image that run a script to store pokebase api to csv file. The image is saved with py file format. In this task, the file is named as hit_pokeapi.py
 Write the python code as follows: <br>
+
 import requests
 import csv
 
