@@ -103,7 +103,7 @@ if __name__ == "__main__":
 5. Create a Dockerfile.python to runs a python container in Docker. Write the code as follows: <br>
 FROM python:3.9
 
-# Create a directory to store the script and CSV files
+#Create a directory to store the script and CSV files
 WORKDIR /app/output/
 COPY requirements.txt /app/output/
 RUN pip install --no-cache-dir -r requirements.txt
